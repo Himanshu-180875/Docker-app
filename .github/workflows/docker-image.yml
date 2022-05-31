@@ -22,4 +22,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag nodejs-app:1.0
     - name: docker push
-      run: docker push $DOCKER_USER/nodejs-app:1.0
+      run: docker push ${{ secrets.DOCKER_USER }}/nodejs-app
